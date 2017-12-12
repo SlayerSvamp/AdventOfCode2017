@@ -28,9 +28,9 @@ namespace Day07
         }
 
     }
-    class Application
+    static class Application
     {
-        static List<Program> Initialize(out List<Program> programs)
+        static void Initialize(out List<Program> programs)
         {
             var input = File.ReadAllLines("input.txt").Select(x => x.Split(' '));
 
@@ -50,7 +50,6 @@ namespace Day07
                     sub.BalancingOn = program;
                 }
             }
-            return programs;
         }
         static Program Part1(List<Program> programs)
         {
